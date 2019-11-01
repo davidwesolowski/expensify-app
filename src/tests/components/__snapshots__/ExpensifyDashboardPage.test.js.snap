@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render ExpensifyDashboardPage correctly 1`] = `
+<div>
+  <Connect(ExpensesListFilter) />
+  <Connect(ExpensesList) />
+</div>
+`;
