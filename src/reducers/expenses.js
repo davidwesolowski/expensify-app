@@ -7,7 +7,8 @@ const expensesReducer = (state = expensesDefaultState, action) =>
         case 'ADD_EXPENSE':
             return [
                 ...state,
-                action.expenses
+                action.expense
+                //action.expenses przed firebase
             ];
         case 'REMOVE_EXPENSE':
             return state.filter((element) => element.id !== action.id);

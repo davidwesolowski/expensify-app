@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config=test.config.json",
+    "test": "cross-env NODE_ENV=test jest --config=test.config.json",
     "serve": "live-server public",
     "build:dev": "webpack",
     "dev-server": "webpack-dev-server",
@@ -15,7 +15,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "firebase": "^7.3.0",
     "moment": "^2.24.0",
     "normalize.css": "^8.0.1",
     "numeral": "^2.0.6",
@@ -28,6 +30,8 @@
     "react-router-dom": "^5.1.1",
     "react-test-renderer": "^16.10.2",
     "redux": "^4.0.4",
+    "redux-mock-store": "^1.5.3",
+    "redux-thunk": "^2.3.0",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
@@ -37,7 +41,11 @@
     "@babel/preset-react": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.6",
+    "cross-env": "^6.0.3",
     "css-loader": "^3.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.2",
     "jest": "^24.9.0",
     "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.8.0",
@@ -46,9 +54,6 @@
     "style-loader": "^1.0.0",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.1",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
-    "enzyme-to-json": "^3.4.2"
+    "webpack-dev-server": "^3.8.1"
   }
 }

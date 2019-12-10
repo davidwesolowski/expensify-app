@@ -10,6 +10,7 @@ import { getVisibleExpenses } from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
+import '../src/firebase/firebase';
 
 const store = configureStore();
 
@@ -20,9 +21,9 @@ store.subscribe(() =>
     console.log(visible);
 });
 
-store.dispatch(addExpense({ description: 'Water bill', amount: 200, note: 'Nothing', createdAt: 1569880801234 }));
-store.dispatch(addExpense({ description: 'Gas bill', amount: 250, note: 'Nothing', createdAt: 1569880809999 }));
-store.dispatch(addExpense({ description: 'Rent', amount: 100, note: 'Nothing', createdAt: 1569880800333 }));
+// store.dispatch(addExpense({ description: 'Water bill', amount: 200, note: 'Nothing', createdAt: 1569880801234 }));
+// store.dispatch(addExpense({ description: 'Gas bill', amount: 250, note: 'Nothing', createdAt: 1569880809999 }));
+// store.dispatch(addExpense({ description: 'Rent', amount: 100, note: 'Nothing', createdAt: 1569880800333 }));
 
 //store.dispatch(setTextFilters('bill'));
 
