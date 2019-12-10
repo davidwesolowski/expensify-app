@@ -1,6 +1,8 @@
 import moment from 'moment';
 import expensesReducer from '../../reducers/expenses';
 import expenses from '../fixtures/expenses';
+import { setExpenses } from '../../actions/expenses';
+import { access } from 'fs';
 
 test('Should setup default state', () =>
 {
@@ -79,4 +81,29 @@ test('Should not edit expense with a given incorrect id', () =>
     };
     const state = expensesReducer(expenses, action);
     expect(state[0].description).not.toBe(description);
+});
+
+test('Should set given expenses', () =>
+{
+    const prevState = [
+        {
+            id: 5,
+            description: 'coffee',
+            note: '',
+            amount: 10
+        },
+        {
+            id: 6,
+            description: 'tea',
+            note: 'sadsa',
+            amount: 5
+        }
+    ];
+    const action = 
+    {
+        type: 'SET_EXPENSES',
+        expenses
+    };
+    const state = expensesReducer(prevState, action);
+    expect(state).toEqual(expenses);
 });
