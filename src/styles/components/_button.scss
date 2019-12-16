@@ -1,0 +1,23 @@
+.button
+{
+    background-color: $semi-dark-blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: $font-size-large;
+    letter-spacing: 1.2;
+    font-weight: 300;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button--link
+{
+    background: none;
+}
+
+.button--secondary
+{
+    background: #888;
+}

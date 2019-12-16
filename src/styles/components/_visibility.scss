@@ -1,0 +1,15 @@
+.visible-for-mobile
+{
+    @media (min-width: $desktop-breakpoints)
+    {
+        display: none;
+    }
+}
+
+.visible-for-desktop
+{
+    @media (max-width: $desktop-breakpoints - .01rem)
+    {
+        display: none;
+    }
+}
