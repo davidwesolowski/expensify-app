@@ -1,1 +1,1 @@
-Expensify app created with React, Redux, JEST.
+Expensify app built with React, Redux, JEST.
